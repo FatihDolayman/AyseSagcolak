@@ -1,0 +1,34 @@
+﻿@model List<AyseSagcolak.Models.Subscriber> 
+@{
+    ViewBag.Title = "Subscribers";
+}
+<main id="main" class="my-5 py-5">
+    <div class="container">
+        <h2>Kayıt olanlar</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Surname</td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</main>
+   
+
